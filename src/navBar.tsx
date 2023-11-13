@@ -1,8 +1,7 @@
-import { createSignal, onCleanup } from "solid-js";
+import { createSignal } from "solid-js";
 
 
 const NavBar = () => {
-    const [currentPage, setCurrentPage] = createSignal('index');
     const [isIndex, setIsIndex] = createSignal(true);
     const [isLink, setIsLink] = createSignal(false);
     const [isAbout, setIsAbout] = createSignal(false);
@@ -10,19 +9,16 @@ const NavBar = () => {
     const changePage = (page: string) => {
         switch (page) {
             case 'index':
-                console.log("index");
                 setIsIndex(true);
                 setIsLink(false);
                 setIsAbout(false);
                 return;
             case 'link':
-                console.log("link");
                 setIsIndex(false);
                 setIsLink(true);
                 setIsAbout(false);
                 return;
             case 'about':
-                console.log("about");
                 setIsIndex(false);
                 setIsLink(false);
                 setIsAbout(true);

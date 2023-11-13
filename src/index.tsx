@@ -9,4 +9,3 @@ import IndexTitle from './indexTitle';
 
 render(() => <IndexTitle />, document.getElementById("title")!)
 render(() => <NarBar />, document.getElementById("nav")!)
-render(() => <App />, document.getElementById('row')!);
